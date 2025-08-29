@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Memories Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+  </head>
+  <body class="page page-gallery">
+    <div class="bg-gradient"></div>
+    <main class="container">
+      <a class="nav-link" href="story.html">← Back</a>
+      <section class="card">
+        <h2 class="title">Our favorite moments</h2>
+        <div class="masonry" id="gallery"></div>
+        <div class="actions">
+          <a class="button" href="../index.html">Home</a>
+          <a class="button primary" href="map.html">Next: Our places</a>
+        </div>
+      </section>
+      <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+        <button id="lightboxClose" class="lightbox-close" aria-label="Close">×</button>
+        <img id="lightboxImg" alt="Memory" />
+        <p id="lightboxCaption"></p>
+      </div>
+    </main>
+
+    <script src="../assets/js/gallery.js"></script>
+  </body>
+  </html>
+
+
