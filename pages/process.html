@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Processing...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+    <style>
+      body.page-process { background: #0b0b12; }
+      .process-text { text-align: center; font-size: clamp(18px, 2.4vw, 24px); color: var(--muted); min-height: 30vh; display: grid; place-items: center; }
+      .process-card { background: rgba(255,255,255,0.04); border: 1px solid var(--card-border); border-radius: 18px; padding: 32px; }
+      .process-line { opacity: 0; transform: translateY(8px); transition: opacity 700ms ease, transform 700ms ease; }
+      .process-line.show { opacity: 1; transform: none; }
+    </style>
+  </head>
+  <body class="page page-process">
+    <main class="container center">
+      <section class="process-card" aria-live="polite">
+        <div id="process" class="process-text"></div>
+      </section>
+    </main>
+    <script src="../assets/js/process.js"></script>
+  </body>
+  </html>
+
+

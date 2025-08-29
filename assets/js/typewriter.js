@@ -1,9 +1,10 @@
 const lines = [
-  "Hi beautiful,",
-  "Today is all about celebrating you.",
-  "Your kindness, your laugh, your spark — the way you light up every room.",
-  "You are my favorite story, and this is just a tiny chapter of us.",
-  "Ready to see some of our favorite moments?"
+  "hi beautiful,",
+  "aaj aapka special din hai.",
+  "and, today we shall figure the mystery that's been plaguing society hitherto.",
+  "the mystery of who is the most gosh darn pretty girl in this world*!",
+  "* world here encompassing the whole universe and disregarding all potential geo-political conflicts. the borders of all sovereign nations are hereby invalid for our test. for further reading on how to disconnect ourselves from our post-colonial [and somewhat neo-colonial idea; as outlined by our pyaaru sartre] ideation of borders and ownership of lands, please refer to Aviva Chomsky's undocumented which is an incredible book that might give some perspective onto how beneath the bubbling conservatism of anti-immigration policies lies something rather disconcerting and barbaric.",
+  "lets find out who is the most prettiest girl in the world!!!!!!!!!!!!!!!!!!"
 ];
 
 const typeTarget = document.getElementById('typewriter');

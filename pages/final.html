@@ -14,7 +14,7 @@
     <div class="bg-gradient"></div>
     <main class="container center">
       <section class="card">
-        <h2 class="title">Happy Birthday, my love 🎂</h2>
+        <h2 class="title"><span id="mystery" class="mystery">and the answer is....</span> <span id="nameReveal" class="name hidden"></span></h2>
         <p class="letter" id="letter"></p>
         <canvas id="confettiCanvas" class="confetti"></canvas>
         <div class="actions">
@@ -22,6 +22,15 @@
         </div>
       </section>
     </main>
+
+    <button id="momentsPopup" class="moments-popup" aria-controls="collageOverlay" aria-expanded="false">if you ever want to see our best moments →</button>
+    <div id="collageOverlay" class="collage-overlay hidden" aria-hidden="true">
+      <div class="collage-content">
+        <button id="collageClose" class="collage-close" aria-label="Close">×</button>
+        <h3 class="subtitle">Our best moments</h3>
+        <div id="collageGrid" class="collage-grid"></div>
+      </div>
+    </div>
 
     <script src="../assets/js/final.js"></script>
   </body>

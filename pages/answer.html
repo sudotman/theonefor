@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Answer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+    <style>
+      body.page-answer { background: #0b0b12; }
+      .answer { text-align: center; }
+      .answer .mystery { display: inline-block; font-size: clamp(28px, 4.5vw, 48px); }
+      .answer .cta { margin-top: 24px; }
+    </style>
+  </head>
+  <body class="page page-answer">
+    <main class="container center">
+      <section class="card answer">
+        <h2 class="title"><span id="mystery" class="mystery">and the answer is....</span></h2>
+        <div class="cta">
+          <a class="button primary" href="final.html">Reveal</a>
+        </div>
+      </section>
+    </main>
+    <script>
+      const el = document.getElementById('mystery');
+      requestAnimationFrame(() => el.classList.add('show'));
+    </script>
+  </body>
+  </html>
+
+

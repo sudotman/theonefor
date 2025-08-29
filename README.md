@@ -35,3 +35,6 @@ Then open `http://localhost:5173`.
 Upload all files to your hosting provider or use static hosting (Netlify, Vercel, GitHub Pages) and point your domain `themostbeautifulgirlintheworld` to it via DNS (A/AAAA or CNAME).
 
 
+## to do
+they appear below each other. the loading emssages. they should crossfade.
+ further, it should automatically reveal without having to press the button.
