@@ -31,7 +31,7 @@
         const listObserver = new MutationObserver((mutations) => {
           mutations.forEach(m => {
             if (m.addedNodes && m.addedNodes.length) {
-              if (window.SFX) window.SFX.play('soft');
+              if (window.SFX) window.SFX.play('soft').catch(()=>{});
             }
           });
         });
@@ -39,7 +39,7 @@
         if (el) listObserver.observe(el, { childList: true, subtree: true });
         document.addEventListener('click', (e) => {
           if (e.target && e.target.classList && e.target.classList.contains('reveal-cta')) {
-            if (window.SFX) window.SFX.play('click');
+            if (window.SFX) window.SFX.play('click').catch(()=>{});
           }
         });
       })();

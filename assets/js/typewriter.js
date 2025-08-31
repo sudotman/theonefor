@@ -21,7 +21,7 @@ function typeLine(text, cb) {
     span.textContent = text.slice(0, i++);
     // play type sound every 2-3 chars to avoid audio spam
     if (window.SFX && (tick++ % (2 + (Math.random() > 0.6 ? 1 : 0)) === 0)) {
-      window.SFX.play('type');
+      window.SFX.play('type').catch(()=>{});
     }
     if (i > text.length) { clearInterval(timer); setTimeout(cb, 400); }
   }, 28);

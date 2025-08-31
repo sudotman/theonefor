@@ -42,11 +42,23 @@
 
     toggle() { this.setEnabled(!this.enabled); }
 
-    play(name, when = 0) {
+    async _ensureContext() {
+      if (!this.ctx) {
+        this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (this.ctx.state === 'suspended') {
+        await this.ctx.resume();
+      }
+      if (!this.masterGain) {
+        this.masterGain = this.ctx.createGain();
+        this.masterGain.gain.value = this.enabled ? 1 : 0;
+        this.masterGain.connect(this.ctx.destination);
+      }
+    }
+
+    async play(name, when = 0) {
       if (!this.enabled) return;
-      this.ctx = this.ctx || new (window.AudioContext || window.webkitAudioContext)();
-      this.masterGain = this.masterGain || this.ctx.createGain();
-      if (!this.masterGain.numberOfOutputs) this.masterGain.connect(this.ctx.destination);
+      await this._ensureContext();
       const fn = this[`_${name}`];
       if (typeof fn === 'function') fn.call(this, when);
     }
@@ -125,12 +137,12 @@
       btn.style.opacity = '1';
       btn.style.transform = 'none';
     });
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', async () => {
       window.SFX.toggle();
       const on = window.SFX.enabled;
       btn.textContent = on ? '🔊' : '🔈';
       btn.setAttribute('aria-pressed', String(on));
-      window.SFX.play('click');
+      await window.SFX.play('click');
     });
     const on = window.SFX.enabled;
     btn.textContent = on ? '🔊' : '🔈';
