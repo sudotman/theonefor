@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Answer</title>
+    <title>The Question</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -19,12 +19,13 @@
   <body class="page page-answer">
     <main class="container center">
       <section class="card answer">
-        <h2 class="title"><span id="mystery" class="mystery">and the answer is....</span></h2>
+        <h2 class="title"><span id="mystery" class="mystery">who is the most beautiful girl in the world?</span></h2>
         <div class="cta">
-          <a class="button primary" href="final.html">Reveal</a>
+          <a class="button primary" href="final.html" onclick="window.SFX && window.SFX.play('click')">click to find out</a>
         </div>
       </section>
     </main>
+    <script src="../assets/js/sfx.js"></script>
     <script>
       const el = document.getElementById('mystery');
       requestAnimationFrame(() => el.classList.add('show'));

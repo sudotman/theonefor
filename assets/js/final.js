@@ -1,7 +1,11 @@
 const letter = `i love you.
 
-you make the ordinary magical and the tough days softer.
-with you, every moment feels like home.
+even though we had some tough times, we still persist because
+we love each other so much.
+
+and, now that you're finally old [24!!!], we can talk real.
+i am going to keep loving you bohot ache se because there is
+one thing that I shall not do is fumble a baddie like you.
 
 happy birthday to the most beautiful girl in the world.
 always yours.

@@ -23,7 +23,27 @@
         <div id="process" class="process-text"></div>
       </section>
     </main>
+    <script src="../assets/js/sfx.js"></script>
+    <script src="../assets/js/answers.js"></script>
     <script src="../assets/js/process.js"></script>
+    <script>
+      (function(){
+        const listObserver = new MutationObserver((mutations) => {
+          mutations.forEach(m => {
+            if (m.addedNodes && m.addedNodes.length) {
+              if (window.SFX) window.SFX.play('soft');
+            }
+          });
+        });
+        const el = document.getElementById('process');
+        if (el) listObserver.observe(el, { childList: true, subtree: true });
+        document.addEventListener('click', (e) => {
+          if (e.target && e.target.classList && e.target.classList.contains('reveal-cta')) {
+            if (window.SFX) window.SFX.play('click');
+          }
+        });
+      })();
+    </script>
   </body>
   </html>
 

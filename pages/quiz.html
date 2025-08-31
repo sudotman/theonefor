@@ -29,12 +29,14 @@
             <label>Finish the sentence: You are my ____</label>
             <input type="text" name="q3" placeholder="Your answer" required />
           </div>
-          <button type="submit" class="button primary">Submit</button>
+          <button type="submit" class="button primary" onclick="window.SFX && window.SFX.play('click')">Submit</button>
         </form>
         <div id="quizMessage" class="hidden success"></div>
       </section>
     </main>
 
+    <script src="../assets/js/sfx.js"></script>
+    <script src="../assets/js/answers.js"></script>
     <script src="../assets/js/quiz.js"></script>
   </body>
   </html>

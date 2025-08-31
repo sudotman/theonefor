@@ -18,7 +18,7 @@
         <p class="letter" id="letter"></p>
         <canvas id="confettiCanvas" class="confetti"></canvas>
         <div class="actions">
-          <a class="button" href="../index.html">Restart</a>
+          <a class="button" href="../index.html" onclick="window.SFX && window.SFX.play('click')">Restart</a>
         </div>
       </section>
     </main>
@@ -32,7 +32,19 @@
       </div>
     </div>
 
+    <script src="../assets/js/sfx.js"></script>
     <script src="../assets/js/final.js"></script>
+    <script>
+      (function(){
+        const origReveal = window.revealSequence;
+        if (typeof origReveal === 'function') {
+          window.revealSequence = function(){
+            origReveal();
+            setTimeout(() => { if (window.SFX) window.SFX.play('confetti'); }, 1600);
+          };
+        }
+      })();
+    </script>
   </body>
   </html>
 
