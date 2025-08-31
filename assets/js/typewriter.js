@@ -14,10 +14,15 @@ let lineIdx = 0;
 
 function typeLine(text, cb) {
   let i = 0;
+  let tick = 0;
   const span = document.createElement('p');
   typeTarget.appendChild(span);
   const timer = setInterval(() => {
     span.textContent = text.slice(0, i++);
+    // play type sound every 2-3 chars to avoid audio spam
+    if (window.SFX && (tick++ % (2 + (Math.random() > 0.6 ? 1 : 0)) === 0)) {
+      window.SFX.play('type');
+    }
     if (i > text.length) { clearInterval(timer); setTimeout(cb, 400); }
   }, 28);
 }

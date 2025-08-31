@@ -94,6 +94,20 @@
         o.stop(t + 0.26);
       }
     }
+
+    _type(when = 0) {
+      const now = this.ctx.currentTime + when;
+      const osc = this.ctx.createOscillator();
+      const g = this.ctx.createGain();
+      osc.type = 'square';
+      const base = 2400 + Math.random() * 300;
+      osc.frequency.setValueAtTime(base, now);
+      g.gain.setValueAtTime(0.045, now);
+      g.gain.exponentialRampToValueAtTime(0.0001, now + 0.03);
+      osc.connect(g).connect(this.masterGain);
+      osc.start(now);
+      osc.stop(now + 0.035);
+    }
   }
 
   function injectToggle() {
